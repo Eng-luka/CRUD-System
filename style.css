@@ -1,0 +1,131 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url(img/pexels-eye4dtail-357543.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.layout{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+}
+.CRUD{
+  width: 80%;
+  margin: auto;
+}
+.CRUD .head h1{
+  background: linear-gradient(to right, #baff1a 0%, rgb(109, 95, 15) 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 45px;
+}
+.CRUD .head p{
+  font-size: 20px;
+}
+.head{
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+input {
+  width: 100%;
+  height: 40px;
+  background-color: #114232;
+  border: 2px solid transparent;
+  color: white;
+  padding: 1rem;
+  box-shadow: 2px 2px 5px black, inset 2px 2px 5px rgb(53, 51, 51),
+    -1px -1px 20px rgba(59, 56, 56, 0.781);
+  outline: none;
+  border-radius: 10px;
+  font-size: medium;
+}
+input:focus {
+  box-shadow: 2px 2px 5px black, inset 2px 2px 5px black,
+    -1px -1px 5px rgba(68, 67, 67, 0.781),
+    inset -1px -1px 5px rgba(66, 65, 65, 0.822);
+}
+.inputs .salary{
+  /* width: 21%; */
+  display: grid;
+  grid-template-columns: repeat(5 , 1fr);
+  gap: 10px;
+}
+#total{
+  background: #87A922;
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#total::before{
+  content: "Total : ";
+}
+button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #fff;
+  background-color: #87A922;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #114232;
+  border-radius: 40px 40px 40px 40px;
+  padding: 16px 24px 16px 28px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  margin: 15px 0;
+}
+button:hover {
+  color: #516d91;
+  background-color: #F7F6BB;
+  box-shadow: 2px 2px 5px black, inset 2px 2px 5px black,
+  -1px -1px 5px rgba(68, 67, 67, 0.781),
+  inset -1px -1px 5px rgba(66, 65, 65, 0.822);
+  letter-spacing: 1px;
+}
+button:active {box-shadow: none;}
+.outputs{
+  border-bottom: 1px solid #FCDC2A;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.btnsearch{
+  display: flex;
+  gap: 20px;
+}
+table{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+table th{
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+th,td{
+  padding: 5px;
+}  
