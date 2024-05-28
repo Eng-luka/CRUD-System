@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,76 +10,70 @@
     <title>CRUD System</title>
 </head>
 <body>
-    <div class="layout">
-        <div class="CRUD">
-            <!-- Start Head -->
-            <div class="head">
-                <h1>CRUD System</h1>
-                <p>product managment</p>
-            </div>
-        <!-- End Head -->
-    
-        <!-- Start Inputs -->
-            <div class="inputs">
-                <input id="title" placeholder="Title" name="text" type="text" />
-                <div class="salary mt-3 mb-3">
-                    <input onkeyup="getTotal()" id="price" placeholder="Price" name="text" type="number" />
-                    <input onkeyup="getTotal()" id="taxes" placeholder="Taxes" name="text" type="number" />
-                    <input onkeyup="getTotal()" id="ads" placeholder="Ads" name="text" type="number" />
-                    <input onkeyup="getTotal()" id="discount" placeholder="Discount" name="text" type="number" />
-                    <small id="total">4324</small>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="CRUD">
+                    <!-- Start Head -->
+                    <div class="head">
+                        <h1>CRUD System</h1>
+                        <p>product managment</p>
+                    </div>
+                    <!-- End Head -->
+                <!-- Start Inputs -->
+                    <div class="inputs">
+                        <input id="title" placeholder="Title" name="text" type="text" />
+                        <div class="salary mt-3 mb-3">
+                            <input onkeyup="getTotal()" id="price" placeholder="Price" name="text" type="number" />
+                            <input onkeyup="getTotal()" id="taxes" placeholder="Taxes" name="text" type="number" />
+                            <input onkeyup="getTotal()" id="ads" placeholder="Ads" name="text" type="number" />
+                            <input onkeyup="getTotal()" id="discount" placeholder="Discount" name="text" type="number" />
+                            <small id="total"></small>
+                        </div>
+                        <input class="mb-3" id="count" placeholder="Count" name="text" type="number" />
+                        <input id="category" placeholder="Category" name="text" type="text" />
+                        <button id="submit">Create</button>
+                    </div>
+                <!-- End Inputs -->
+                <!-- Start Outputs -->
+                    <div class="outputs">
+                        <div class="search">
+                            <input onkeyup="searchDate(this.value)" id="search" placeholder="Search" name="text" type="text" />
+                        </div>
+                        <div class="btnsearch">
+                            <button onclick="getsearchMode(this.id)" id="searchTitle">Search By Title </button>
+                            <button onclick="getsearchMode(this.id)" id="searchCategory">Search By Category </button>
+                        </div>
+                    </div>
+                <!-- End Outputs -->
+                <div id="deleteAll"></div>
+                <!-- Start Table -->
+                <table class="table">
+                    <thead>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+                <!-- End Table -->
                 </div>
-                <input class="mb-3" id="count" placeholder="Count" name="text" type="number" />
-                <input id="category" placeholder="Category" name="text" type="text" />
-                <button id="submit">Create</button>
             </div>
-        <!-- End Inputs -->
-    
-        <!-- Start Outputs -->
-            <div class="outputs">
-                <div class="search">
-                    <input id="search" placeholder="Search" name="text" type="text" />
-                </div>
-                <div class="btnsearch">
-                    <button id="searchTitle">Search By Title </button>
-                    <button id="searchCategory">Search By Category </button>
-                </div>
-            </div>
-        <!-- End Outputs -->
-        
-        <!-- Start Table -->
-            <table>
-                <tr>
-                    <th>id</th>
-                    <th>title</th>
-                    <th>price</th>
-                    <th>taxes</th>
-                    <th>ads</th>
-                    <th>discount</th>
-                    <th>total</th>
-                    <th>category</th>
-                    <th>update</th>
-                    <th>delete</th>
-                </tr>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>oppo</td>
-                        <td>44</td>
-                        <td>44</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td><button id="update">Update</button></td>
-                        <td><button id="delete">delete</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <!-- End Table -->
         </div>
     </div>
+
         
+
+    
     <script src="main.js"></script>
 </body>
 </html>
