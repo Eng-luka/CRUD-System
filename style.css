@@ -1,25 +1,35 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-
 body{
   color: white;
+  background-color: black;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-image: url(img/pexels-eye4dtail-357543.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
 }
-.layout{
-  background-color: rgba(0, 0, 0, 0.7);
+.container{
   width: 100%;
-  height: 100vh;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.CRUD{
-  width: 80%;
-  margin: auto;
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
+.coi-lg-12{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* ======================================= */
+
 .CRUD .head h1{
   background: linear-gradient(to right, #baff1a 0%, rgb(109, 95, 15) 100%);
   background-clip: text;
@@ -53,7 +63,6 @@ input:focus {
     inset -1px -1px 5px rgba(66, 65, 65, 0.822);
 }
 .inputs .salary{
-  /* width: 21%; */
   display: grid;
   grid-template-columns: repeat(5 , 1fr);
   gap: 10px;
@@ -68,9 +77,7 @@ input:focus {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-#total::before{
-  content: "Total : ";
-}
+#total::before{content: "Total : ";}
 button {
   width: 100%;
   height: 40px;
@@ -109,23 +116,93 @@ button:hover {
 button:active {box-shadow: none;}
 .outputs{
   border-bottom: 1px solid #FCDC2A;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   margin-bottom: 20px;
 }
-
 .btnsearch{
   display: flex;
   gap: 20px;
 }
-table{
+#deleteAll{margin: 20px 0;}
+/*============= Table ==============*/
+.table{
   width: 100%;
-  text-align: center;
   margin: 10px 0;
+  border-collapse: collapse;
 }
-table th{
-  text-transform: uppercase;
-  padding-bottom: 10px;
+.table td, .table th{
+  padding: 12px 15px;
+  border: 1px solid #FCDC2A;
+  text-align: center;
+  color: #fff;
+  vertical-align: middle;
 }
-th,td{
-  padding: 5px;
-}  
+.table th{
+  background-color: #114232;
+  text-transform: capitalize;
+}
+.table tr{text-align: center;}
+
+/* Media */
+@media (max-width:500px) {
+  .inputs .salary{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 10px;
+  }
+  .btnsearch{display: block;}
+
+  .table thead{display: none;}
+
+  .table, .table tbody, .table tr, .table td{
+    display: block;
+    width: 100%;
+  }
+  .table td{
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+  .table td::before{
+    content: attr(date-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+@media (min-width:501px) and (max-width:991px){
+  .inputs .salary{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 10px;
+  }
+
+  .table thead{
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td{
+    display: block;
+    width: 100%;
+  }
+  .table td{
+    text-align: right;
+    padding-left: 50%;
+    text-align: right;
+    position: relative;
+  }
+  .table td::before{
+    content: attr(date-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
